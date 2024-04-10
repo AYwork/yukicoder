@@ -55,7 +55,7 @@ def main():
             if j == m-1:
                 print(a[i][j])
             else:
-                print(a[i][j], end=' ')
+                print(a[i][j], end = ' ')
 
 if __name__ == "__main__":
     main()
