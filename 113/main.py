@@ -1,12 +1,17 @@
 import math
 def main():
-    A = str(input())
-    E = A.count('E')
-    W = A.count('W')
-    N = A.count('N')
-    S = A.count('S')
+    input_string = input()
 
-    print(math.sqrt(pow((abs(E - W)),2)+pow((abs(N - S)),2)))
+    ans = 101
+
+    for i in range(len(input_string)-2):
+        for j in range(i+2,len(input_string)):
+            if input_string[i] == 'c' and S[j] == 'w' and input_string[i:j+1].count('w') == 2:
+                ans = min(ans, j-i+1)
+            else:
+                continue
+
+    print(ans if ans != 101 else -1)
 
 
 if __name__ == "__main__":
